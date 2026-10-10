@@ -456,6 +456,9 @@ function FirmendatenSektion({ data, activeTab }: { data: Unternehmen; activeTab:
                 const raw = ev.target.value.replace(/\s/g, '').toUpperCase()
                 const formatted = raw.replace(/(.{4})/g, '$1 ').trimEnd()
                 set('iban', formatted)
+                setFehler(null)
+                setBankFehler(null)
+                setBicFehler(null)
               }}
               placeholder="DE89 3704 0044 0532 0130 00"
               className={inputCls}
@@ -472,11 +475,11 @@ function FirmendatenSektion({ data, activeTab }: { data: Unternehmen; activeTab:
           <div className="grid grid-cols-2 gap-4">
             <Field label="BIC">
               {inp('bic', 'COBADEFFXXX')}
-              {bicFehler && <p className="text-xs text-red-600 dark:text-red-400 mt-1">{bicFehler}</p>}
+              {bicFehler && <p className="mt-1 rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-xs text-slate-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-400">{bicFehler}</p>}
             </Field>
             <Field label="Bank">
               {inp('bank_name', 'Deutsche Bank')}
-              {bankFehler && <p className="text-xs text-red-600 dark:text-red-400 mt-1">{bankFehler}</p>}
+              {bankFehler && <p className="mt-1 rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-xs text-slate-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-400">{bankFehler}</p>}
             </Field>
           </div>
         </div>
