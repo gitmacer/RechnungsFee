@@ -67,6 +67,15 @@ function TabNav({ active, onChange }: { active: TabId; onChange: (t: TabId) => v
 // Logo-Sektion
 // ---------------------------------------------------------------------------
 
+async function ladeOpenIbanDaten(iban: string) {
+  const res = await fetch(`https://openiban.com/validate/${encodeURIComponent(iban)}?getBIC=true`)
+  if (!res.ok) throw new Error('OpenIBAN-Request fehlgeschlagen')
+  return res.json() as Promise<{ valid: boolean; bankData?: { bic?: string; name?: string } }>
+}
+
+const OPEN_IBAN_BANK_FALLBACK = 'Bank konnte nicht automatisch ermittelt werden. Bitte gib sie manuell ein.'
+const OPEN_IBAN_BIC_FALLBACK = 'BIC / SWIFT konnte nicht automatisch ermittelt werden. Bitte gib sie manuell ein.'
+
 function LogoSektion({
   logoVorhanden,
   onUploaded,
@@ -185,6 +194,8 @@ function FirmendatenSektion({ data, activeTab }: { data: Unternehmen; activeTab:
   })
   const [gespeichert, setGespeichert] = useState(false)
   const [fehler, setFehler] = useState<string | null>(null)
+  const [bankFehler, setBankFehler] = useState<string | null>(null)
+  const [bicFehler, setBicFehler] = useState<string | null>(null)
   const [kontorahmenModus, setKontorahmenModus] = useState<KontorahmenModus>(
     () => (localStorage.getItem(KONTORAHMEN_LS_KEY) ?? '') as KontorahmenModus
   )
@@ -207,6 +218,32 @@ function FirmendatenSektion({ data, activeTab }: { data: Unternehmen; activeTab:
     },
     onError: (e: Error) => setFehler(e.message),
   })
+
+  async function handleBankLookup() {
+    const iban = (form.iban ?? '').replace(/\s/g, '').toUpperCase()
+    if (!iban) {
+      setBankFehler('IBAN ist erforderlich.')
+      setBicFehler('IBAN ist erforderlich.')
+      return
+    }
+
+    setBankFehler(null)
+    setBicFehler(null)
+
+    try {
+      const data = await ladeOpenIbanDaten(iban)
+      if (data.valid) {
+        set('bank_name', data.bankData?.name ?? '')
+        set('bic', data.bankData?.bic ?? '')
+        return
+      }
+    } catch {
+      // bewusst still: lokale Validierung bleibt maßgeblich
+    }
+
+    setBankFehler(OPEN_IBAN_BANK_FALLBACK)
+    setBicFehler(OPEN_IBAN_BIC_FALLBACK)
+  }
 
   function set(key: keyof Unternehmen, value: string | boolean | number | null) {
     setForm(f => ({ ...f, [key]: value }))
@@ -424,9 +461,23 @@ function FirmendatenSektion({ data, activeTab }: { data: Unternehmen; activeTab:
               className={inputCls}
             />
           </Field>
+          <button
+            type="button"
+            onClick={handleBankLookup}
+            className="w-full inline-flex items-center justify-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 text-sm font-medium text-blue-700 hover:bg-blue-100 dark:border-blue-900 dark:bg-blue-950 dark:text-blue-300 dark:hover:bg-blue-900"
+          >
+            <span>↗</span>
+            <span>Bankname und BIC aus IBAN per Web</span>
+          </button>
           <div className="grid grid-cols-2 gap-4">
-            <Field label="BIC">{inp('bic', 'COBADEFFXXX')}</Field>
-            <Field label="Bank">{inp('bank_name', 'Deutsche Bank')}</Field>
+            <Field label="BIC">
+              {inp('bic', 'COBADEFFXXX')}
+              {bicFehler && <p className="text-xs text-red-600 dark:text-red-400 mt-1">{bicFehler}</p>}
+            </Field>
+            <Field label="Bank">
+              {inp('bank_name', 'Deutsche Bank')}
+              {bankFehler && <p className="text-xs text-red-600 dark:text-red-400 mt-1">{bankFehler}</p>}
+            </Field>
           </div>
         </div>
       </div>
