@@ -29,6 +29,8 @@ export function StepKonto({ onNext, onBack, isLoading }: Props) {
     defaultValues: { kontoart: 'bank', kontotyp: 'geschaeftlich' },
   })
 
+  const handleBankLookup = () => {}
+
   return (
     <form onSubmit={handleSubmit(onNext)} className="space-y-5">
       <p className="text-sm text-slate-600 dark:text-slate-300">
@@ -61,6 +63,12 @@ export function StepKonto({ onNext, onBack, isLoading }: Props) {
           className="w-full rounded-lg border border-slate-300 dark:border-slate-600 px-3 py-2 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-slate-100 dark:placeholder-slate-400" />
         {errors.iban && <p className="text-red-500 text-xs mt-1">{errors.iban.message}</p>}
       </div>
+
+      <button type="button" onClick={handleBankLookup}
+        className="w-full inline-flex items-center justify-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 text-sm font-medium text-blue-700 hover:bg-blue-100 dark:border-blue-900 dark:bg-blue-950 dark:text-blue-300 dark:hover:bg-blue-900">
+     <span>↗</span>
+       <span>Bankname und BIC aus IBAN per Web</span>
+     </button>
 
       <div>
         <label className="block text-sm font-medium text-slate-700 dark:text-slate-200 mb-1">BIC / SWIFT</label>
