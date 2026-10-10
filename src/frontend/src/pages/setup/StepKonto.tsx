@@ -16,6 +16,10 @@ const schema = z.object({
       } else if (v.length > 34) {
         ctx.addIssue({ code: 'custom', message: 'Zu viele Zeichen' })
       }
+
+      if (v.startsWith('DE') && v.length !== 22) {
+        ctx.addIssue({ code: 'custom', message: v.length < 22 ? 'Zu wenig Zeichen' : 'Zu viele Zeichen' })
+      }
     }),
   bic:      z.string().optional(),
   kontotyp: z.enum(['geschaeftlich', 'mischkonto']),
