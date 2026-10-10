@@ -2,6 +2,22 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 
+function pruefeDeIbanChecksum(iban: string) {
+  const moved = iban.slice(4) + iban.slice(0, 4)
+  let digits = ''
+
+  for (const ch of moved) {
+    digits += /[A-Z]/.test(ch) ? String(ch.charCodeAt(0) - 55) : ch
+  }
+
+  let rest = 0
+  for (const ch of digits) {
+    rest = (rest * 10 + Number(ch)) % 97
+  }
+
+  return rest === 1
+}
+
 const schema = z.object({
   name:     z.string().min(1, 'Name ist erforderlich'),
   anbieter: z.string().min(1, 'Bank ist erforderlich'),
@@ -13,12 +29,23 @@ const schema = z.object({
     .superRefine((v, ctx) => {
       if (v.length < 15) {
         ctx.addIssue({ code: 'custom', message: 'Zu wenig Zeichen' })
-      } else if (v.length > 34) {
-        ctx.addIssue({ code: 'custom', message: 'Zu viele Zeichen' })
+        return
       }
 
-      if (v.startsWith('DE') && v.length !== 22) {
-        ctx.addIssue({ code: 'custom', message: v.length < 22 ? 'Zu wenig Zeichen' : 'Zu viele Zeichen' })
+      if (v.length > 34) {
+        ctx.addIssue({ code: 'custom', message: 'Zu viele Zeichen' })
+        return
+      }
+
+      if (v.startsWith('DE')) {
+        if (v.length !== 22) {
+          ctx.addIssue({ code: 'custom', message: v.length < 22 ? 'Zu wenig Zeichen' : 'Zu viele Zeichen' })
+          return
+        }
+
+        if (!pruefeDeIbanChecksum(v)) {
+          ctx.addIssue({ code: 'custom', message: 'Bitte gib eine gültige IBAN ein.' })
+        }
       }
     }),
   bic:      z.string().optional(),
