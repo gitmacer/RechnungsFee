@@ -10,7 +10,13 @@ const schema = z.object({
     .string()
     .min(1, 'IBAN ist erforderlich')
     .transform((v) => v.replace(/\s/g, '').toUpperCase())
-    .refine((v) => v.length >= 15 && v.length <= 34, 'Ungültige IBAN-Länge'),
+    .superRefine((v, ctx) => {
+      if (v.length < 15) {
+        ctx.addIssue({ code: 'custom', message: 'Zu wenig Zeichen' })
+      } else if (v.length > 34) {
+        ctx.addIssue({ code: 'custom', message: 'Zu viele Zeichen' })
+      }
+    }),
   bic:      z.string().optional(),
   kontotyp: z.enum(['geschaeftlich', 'mischkonto']),
 })
