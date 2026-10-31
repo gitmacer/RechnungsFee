@@ -269,43 +269,65 @@ def _spalten_key(name: str) -> str:
     return re.sub(r"[^a-z0-9]", "", s)
 
 
+def _ist_absender_email(key: str) -> bool:
+    return "email" in key and (key.startswith("absender") or key.startswith("from"))
+
+
+def _ist_empfaenger_email(key: str) -> bool:
+    return "email" in key and (key.startswith("empfaenger") or key.startswith("to"))
+
+
 _EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+_BETRAG_KEYS = {"brutto", "betrag", "paymentamount"}
+
+
+def _email_aus_zelle(row: list[str], idx: Optional[int]) -> Optional[str]:
+    if idx is None or idx >= len(row):
+        return None
+    wert = row[idx].strip()
+    if not _EMAIL_RE.match(wert):
+        return None
+    return wert
 
 
 def extract_eigene_email(raw: bytes) -> Optional[str]:
     """Eigene Adresse aus Absender- und Empfänger-Spalte, wenn der Export keine IBAN trägt.
 
     Die eigene Adresse steht in (fast) jeder Zeile, die Gegenstelle nur in einzelnen.
-    „Absender E-Mail-Adresse“ und „Absender-E-Mail-Adresse“ gelten als dieselbe Spalte.
-    Gibt None zurück, wenn die Spalten fehlen oder zwei Adressen gleich oft vorkommen.
+    „Absender E-Mail-Adresse“ und „Absender-E-Mail-Adresse“ gelten als dieselbe Spalte,
+    englische PayPal-Exporte („From Email Address“ / „To Email Address“) ebenfalls.
+    Steht eine Gegenstelle genauso oft in der Datei, entscheidet die Betragsrichtung:
+    bei Ausgabe zählt der Absender, bei Einnahme der Empfänger.
+    Gibt None zurück, wenn die Spalten fehlen oder danach weiterhin zwei Adressen gleichauf liegen.
     """
     enc = detect_encoding(raw)
     text = decode_csv_text(raw, enc)
     delim = detect_delimiter(text)
     zeilen = list(csv.reader(io.StringIO(text), delimiter=delim, quotechar='"'))
 
-    header_idx = absender_i = empfaenger_i = None
+    header_idx = absender_i = empfaenger_i = betrag_i = None
     for i, row in enumerate(zeilen[:_HEADER_SUCH_FENSTER]):
         keys = [_spalten_key(zelle) for zelle in row]
-        absender = next((j for j, k in enumerate(keys) if k.startswith("absender") and "email" in k), None)
-        empfaenger = next((j for j, k in enumerate(keys) if k.startswith("empfaenger") and "email" in k), None)
-        if absender is not None and empfaenger is not None:
-            header_idx, absender_i, empfaenger_i = i, absender, empfaenger
-            break
+        absender = next((j for j, k in enumerate(keys) if _ist_absender_email(k)), None)
+        empfaenger = next((j for j, k in enumerate(keys) if _ist_empfaenger_email(k)), None)
+        if absender is None or empfaenger is None:
+            continue
+        header_idx, absender_i, empfaenger_i = i, absender, empfaenger
+        betrag_i = next((j for j, k in enumerate(keys) if k in _BETRAG_KEYS), None)
+        break
     if header_idx is None or absender_i is None or empfaenger_i is None:
         return None
 
     zaehler: dict[str, int] = {}
+    richtung: dict[str, int] = {}
     original: dict[str, str] = {}
     for row in zeilen[header_idx + 1:]:
         if not any(zelle.strip() for zelle in row):
             continue
         gesehen: set[str] = set()
         for idx in (absender_i, empfaenger_i):
-            if idx >= len(row):
-                continue
-            wert = row[idx].strip()
-            if not _EMAIL_RE.match(wert):
+            wert = _email_aus_zelle(row, idx)
+            if wert is None:
                 continue
             key = wert.lower()
             if key in gesehen:
@@ -313,10 +335,28 @@ def extract_eigene_email(raw: bytes) -> Optional[str]:
             gesehen.add(key)
             zaehler[key] = zaehler.get(key, 0) + 1
             original.setdefault(key, wert)
+        if betrag_i is None or betrag_i >= len(row):
+            continue
+        betrag = parse_betrag(row[betrag_i])
+        if betrag is None or betrag == 0:
+            continue
+        seiten_idx = absender_i if betrag < 0 else empfaenger_i
+        seite = _email_aus_zelle(row, seiten_idx)
+        if seite is None:
+            continue
+        seiten_key = seite.lower()
+        richtung[seiten_key] = richtung.get(seiten_key, 0) + 1
     if not zaehler:
         return None
     beste = max(zaehler.values())
     kandidaten = [key for key, anzahl in zaehler.items() if anzahl == beste]
+    if len(kandidaten) > 1:
+        stimmen = {key: richtung.get(key, 0) for key in kandidaten}
+        beste_richtung = max(stimmen.values())
+        if beste_richtung > 0:
+            enger = [key for key, anzahl in stimmen.items() if anzahl == beste_richtung]
+            if len(enger) == 1:
+                kandidaten = enger
     if len(kandidaten) != 1:
         return None
     return original[kandidaten[0]]

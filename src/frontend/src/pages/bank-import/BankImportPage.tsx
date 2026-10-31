@@ -65,6 +65,7 @@ type AnalyseStatus =
   | { art: 'iban_kein_konto'; iban: string }
   | { art: 'email_match'; email: string; kontoId: number; kontoName: string }
   | { art: 'email_auswahl'; email: string; kontoIds: number[] }
+  | { art: 'email_kein_konto'; email: string }
   | { art: 'kein_iban' }
 
 interface ImportDialogProps {
@@ -95,7 +96,8 @@ function ImportDialog({ konten, templates, onClose, onErfolg }: ImportDialogProp
     analyseStatus.art === 'iban_match' ? analyseStatus.kontoId :
     analyseStatus.art === 'email_match'
       ? (freieKontoauswahl ? (manuellKontoId || null) : analyseStatus.kontoId) :
-    analyseStatus.art === 'email_auswahl' ? (manuellKontoId || null) :
+    analyseStatus.art === 'email_auswahl' || analyseStatus.art === 'email_kein_konto'
+      ? (manuellKontoId || null) :
     analyseStatus.art === 'kein_iban' ? manuellKontoId :
     null
 
@@ -126,6 +128,9 @@ function ImportDialog({ konten, templates, onClose, onErfolg }: ImportDialogProp
         kontoId: result.erkanntes_konto_id,
         kontoName: konto?.name ?? `Konto #${result.erkanntes_konto_id}`,
       })
+    } else if (result.erkannte_email) {
+      setManuellKontoId(0)
+      setAnalyseStatus({ art: 'email_kein_konto', email: result.erkannte_email })
     } else {
       setManuellKontoId(prev => prev || geschaeftskonten[0]?.id || 0)
       setAnalyseStatus({ art: 'kein_iban' })
@@ -368,7 +373,7 @@ function ImportDialog({ konten, templates, onClose, onErfolg }: ImportDialogProp
                     <span className="text-green-500 text-base leading-none mt-0.5">✓</span>
                     <div className="flex-1">
                       <p className="text-xs text-green-700 dark:text-green-300">
-                        {analyseStatus.kontoName} Konto über {analyseStatus.email} erkannt.
+                        Konto „{analyseStatus.kontoName}“ erkannt (Kennung {analyseStatus.email}).
                       </p>
                       {!freieKontoauswahl && (
                         <button
@@ -407,23 +412,44 @@ function ImportDialog({ konten, templates, onClose, onErfolg }: ImportDialogProp
                 </div>
               )}
 
-              {(analyseStatus.art === 'email_auswahl' || analyseStatus.art === 'kein_iban') && (
+              {(analyseStatus.art === 'email_auswahl' || analyseStatus.art === 'kein_iban' || analyseStatus.art === 'email_kein_konto') && (
                 <div className="space-y-2">
                   <div className={`flex items-start gap-2 p-3 rounded-xl border ${
-                    analyseStatus.art === 'kein_iban'
-                      ? 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800'
-                      : 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
+                    analyseStatus.art === 'email_auswahl'
+                      ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
+                      : analyseStatus.art === 'email_kein_konto'
+                        ? 'bg-amber-50 dark:bg-amber-900/20 border-amber-200 dark:border-amber-800'
+                        : 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800'
                   }`}>
-                    <span className={`text-base leading-none mt-0.5 ${analyseStatus.art === 'kein_iban' ? 'text-blue-500' : 'text-green-500'}`}>
-                      {analyseStatus.art === 'kein_iban' ? 'ℹ' : '✓'}
+                    <span className={`text-base leading-none mt-0.5 ${
+                      analyseStatus.art === 'email_auswahl' ? 'text-green-500'
+                        : analyseStatus.art === 'email_kein_konto' ? 'text-amber-500'
+                        : 'text-blue-500'
+                    }`}>
+                      {analyseStatus.art === 'email_auswahl' ? '✓' : analyseStatus.art === 'email_kein_konto' ? '⚠' : 'ℹ'}
                     </span>
                     <p className={`text-xs ${
-                      analyseStatus.art === 'kein_iban'
-                        ? 'text-blue-700 dark:text-blue-300'
-                        : 'text-green-700 dark:text-green-300'
+                      analyseStatus.art === 'email_auswahl'
+                        ? 'text-green-700 dark:text-green-300'
+                        : analyseStatus.art === 'email_kein_konto'
+                          ? 'text-amber-700 dark:text-amber-300'
+                          : 'text-blue-700 dark:text-blue-300'
                     }`}>
                       {analyseStatus.art === 'kein_iban' && 'Kein Konto in der CSV erkannt. Bitte manuell auswählen.'}
-                      {analyseStatus.art === 'email_auswahl' && `${analyseStatus.email} passt zu mehreren Konten. Bitte wähle das passende.`}
+                      {analyseStatus.art === 'email_auswahl' && `${analyseStatus.email} passt zu mehreren Konten. Wähle das passende.`}
+                      {analyseStatus.art === 'email_kein_konto' && (
+                        <>
+                          {analyseStatus.email} steht in der Datei, aber kein Zahlungsdienstleister hat diese Kennung.
+                          Wähle das Konto, oder trag die Adresse unter Konten als Kennung ein.{' '}
+                          <button
+                            type="button"
+                            onClick={() => { navigate('/konten'); onClose() }}
+                            className="underline hover:no-underline font-medium"
+                          >
+                            Zu den Konten
+                          </button>
+                        </>
+                      )}
                     </p>
                   </div>
                   {analyseStatus.art === 'email_auswahl' && !freieKontoauswahl && (
@@ -446,7 +472,7 @@ function ImportDialog({ konten, templates, onClose, onErfolg }: ImportDialogProp
                       }}
                       className="w-full border border-slate-300 dark:border-slate-600 rounded-lg px-3 py-2 text-sm bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-100"
                     >
-                      {analyseStatus.art === 'email_auswahl' && (
+                      {(analyseStatus.art === 'email_auswahl' || analyseStatus.art === 'email_kein_konto') && (
                         <option value="">– Konto wählen –</option>
                       )}
                       {(analyseStatus.art === 'email_auswahl' && !freieKontoauswahl
@@ -607,9 +633,9 @@ function ImportDialog({ konten, templates, onClose, onErfolg }: ImportDialogProp
                   >
                     {analyseStatus.art === 'laden' ? 'Analysiere…' : 'Analysieren'}
                   </button>
-                ) : analyseStatus.art === 'iban_match' || analyseStatus.art === 'kein_iban' || analyseStatus.art === 'email_match' || analyseStatus.art === 'email_auswahl' ? (
+                ) : analyseStatus.art === 'iban_match' || analyseStatus.art === 'kein_iban' || analyseStatus.art === 'email_match' || analyseStatus.art === 'email_auswahl' || analyseStatus.art === 'email_kein_konto' ? (
                   <button
-                    disabled={(analyseStatus.art === 'kein_iban' || analyseStatus.art === 'email_auswahl') && !manuellKontoId}
+                    disabled={(analyseStatus.art === 'kein_iban' || analyseStatus.art === 'email_auswahl' || analyseStatus.art === 'email_kein_konto') && !manuellKontoId}
                     onClick={() => setSchritt(2)}
                     className="px-4 py-2 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-40"
                   >

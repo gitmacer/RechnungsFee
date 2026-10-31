@@ -1,9 +1,11 @@
 """
 Ohne IBAN im Export (PayPal) wird die eigene E-Mail-Adresse gegen die Kennung
 der Zahlungsdienstleister gehalten. Ein Treffer wählt das Konto, mehrere Treffer
-bleiben eine Auswahlliste. Das Bankkonto fällt nicht darüber.
+bleiben eine Auswahlliste. Das Bankkonto fällt nicht darüber. Ohne passende
+Kennung bleibt die erkannte Adresse sichtbar.
 """
 import json
+from pathlib import Path
 
 import pytest
 from sqlalchemy import create_engine
@@ -13,6 +15,9 @@ from api.bank_import import _vorschau_fuer_bytes
 from database.connection import Base
 from database.models import BankTemplate, Konto
 from database.seed import SYSTEM_BANK_TEMPLATES
+from utils.bank_csv_parser import extract_eigene_email
+
+_REPO = Path(__file__).resolve().parents[3]
 
 
 @pytest.fixture
@@ -125,3 +130,51 @@ def test_zwei_dienstleister_liefern_auswahlliste_ohne_bank(db):
     assert result.erkannte_email == "fibu@musterfirma.de"
     assert set(result.email_konto_ids) == {erster.id, zweiter.id}
     assert bank.id not in result.email_konto_ids
+
+
+def test_ohne_kennung_bleibt_adresse_sichtbar(db):
+    _paypal_template(db)
+    db.commit()
+
+    result = _vorschau_fuer_bytes(_csv('"Absender E-Mail-Adresse"', '"Empfänger E-Mail-Adresse"'), None, None, db)
+
+    assert result.erkannte_email == "fibu@musterfirma.de"
+    assert result.email_konto_ids == []
+    assert result.erkanntes_konto_id is None
+
+
+def test_gleichstand_wird_ueber_betragsrichtung_aufgeloest():
+    # Dieselbe Gegenstelle in jeder Zeile: Häufigkeit reicht nicht, das Vorzeichen schon.
+    text = (
+        "Datum,Brutto,Absender E-Mail-Adresse,Empfänger E-Mail-Adresse\n"
+        '01.02.2026,"-10,00",fibu@musterfirma.de,shop@beispiel.de\n'
+        '02.02.2026,"-20,00",fibu@musterfirma.de,shop@beispiel.de\n'
+    )
+    assert extract_eigene_email(text.encode("utf-8")) == "fibu@musterfirma.de"
+
+
+def test_englische_paypal_spalten():
+    text = (
+        "Date,Gross,From Email Address,To Email Address\n"
+        "01.03.2026,100.00,buyer@example.com,fibu@musterfirma.de\n"
+        "02.03.2026,-5.00,fibu@musterfirma.de,shop@example.com\n"
+    )
+    assert extract_eigene_email(text.encode("utf-8")) == "fibu@musterfirma.de"
+
+
+def test_beispieldateien_treffen_die_eigene_adresse():
+    assert extract_eigene_email((_REPO / "vorlagen/bank-csv/paypal.csv").read_bytes()) == "fibu@musterfirma.de"
+    assert extract_eigene_email((_REPO / "docs/testdaten/paypal-test.csv").read_bytes()) == "hallo@meinefirma.de"
+
+
+def test_paypal_beispieldatei_waehlt_konto(db):
+    _paypal_template(db)
+    paypal = _dienstleister(db, "PayPal Geschäft", "fibu@musterfirma.de")
+    db.commit()
+
+    result = _vorschau_fuer_bytes((_REPO / "vorlagen/bank-csv/paypal.csv").read_bytes(), None, None, db)
+
+    assert result.erkanntes_template == "paypal"
+    assert result.erkannte_email == "fibu@musterfirma.de"
+    assert result.erkanntes_konto_id == paypal.id
+    assert len(result.transaktionen) > 0

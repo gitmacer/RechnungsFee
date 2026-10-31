@@ -867,6 +867,7 @@ def _vorschau_fuer_bytes(
 
     # IBAN aus CSV-Header extrahieren und Konto im System suchen.
     # Fehlt die IBAN (PayPal), gilt die eigene E-Mail gegen die Kennung der Zahlungsdienstleister.
+    # Die Adresse bleibt auch ohne Treffer in der Antwort, damit die Oberfläche sie anzeigen kann.
     konto_iban = extract_konto_iban(raw, template)
     erkanntes_konto_id = konto_id  # übernehmen falls manuell übergeben
     erkannte_email: Optional[str] = None
@@ -885,8 +886,6 @@ def _vorschau_fuer_bytes(
             email_konto_ids = _konten_mit_kennung(db, erkannte_email)
             if len(email_konto_ids) == 1:
                 erkanntes_konto_id = email_konto_ids[0]
-            elif not email_konto_ids:
-                erkannte_email = None
 
     transaktionen, enc = parse_csv_mit_template(raw, template)
     hashes = _vorhandene_hashes(db, erkanntes_konto_id) if erkanntes_konto_id else set()
