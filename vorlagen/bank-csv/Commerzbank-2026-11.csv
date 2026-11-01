@@ -1,0 +1,127 @@
+﻿Buchungstag;Wertstellung;Umsatzart;Buchungstext;Betrag;Währung;IBAN Kontoinhaber;Kategorie;Sender;Empfänger;Verwendungszweck
+02.11.2026;02.11.2026;Lastschrift;Firma GmbH Versicherungsbeitrag SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Versicherungen;;Firma GmbH;Versicherungsbeitrag
+30.10.2026;31.10.2026;Zinsen/Entgelte;Kontoführung Konto  532013000 EUR BLZ   370 400 44 vom 01.10.2026 bis 31.10.2026 Grundpreis 5,00- EUR Der Grundpreis zum Buchungsdatum wurde berechnet, weil der vereinbarte Vermögenswert am 30.09.2026 nicht erreicht wurde.;-5;EUR;DE89370400440532013000;Banken & Kredite;;Kontoführung;
+29.10.2026;29.10.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-60;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+20.10.2026;20.10.2026;Überweisung;Firma GmbH Erstattung;90;EUR;DE89370400440532013000;Einnahmen;Firma GmbH;;Erstattung
+16.10.2026;16.10.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-100;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+15.10.2026;15.10.2026;Lastschrift;Firma GmbH Rechnung SEPA-BASISLASTSCHRIFT;-5;EUR;DE89370400440532013000;Wohnen;;Firma GmbH;Rechnung
+15.10.2026;15.10.2026;Lastschrift;Verein Name Beitrag SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Freizeit;;Verein Name;Beitrag
+14.10.2026;14.10.2026;Überweisung;Finanzamt Erstattung;300;EUR;DE89370400440532013000;Einnahmen;Finanzamt;;Erstattung
+14.10.2026;14.10.2026;Überweisung;Finanzamt Erstattung;150;EUR;DE89370400440532013000;Einnahmen;Finanzamt;;Erstattung
+13.10.2026;13.10.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-500;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+13.10.2026;13.10.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-5;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+13.10.2026;13.10.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-90;EUR;DE89370400440532013000;Freizeit;;Firma GmbH;Einkauf
+12.10.2026;12.10.2026;Überweisung;Max Mustermann Umbuchung;500;EUR;DE89370400440532013000;Einnahmen;Max Mustermann;;Umbuchung
+01.10.2026;01.10.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-90;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+01.10.2026;01.10.2026;Lastschrift;Firma GmbH Versicherungsbeitrag SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Versicherungen;;Firma GmbH;Versicherungsbeitrag
+01.10.2026;01.10.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+30.09.2026;30.09.2026;Zinsen/Entgelte;Kontoführung Konto  532013000 EUR BLZ   370 400 44 vom 01.09.2026 bis 30.09.2026 Grundpreis 5,00- EUR Der Grundpreis zum Buchungsdatum wurde berechnet, weil der vereinbarte Vermögenswert am 31.08.2026 nicht erreicht wurde.;-5;EUR;DE89370400440532013000;Banken & Kredite;;Kontoführung;
+30.09.2026;30.09.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-30;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+29.09.2026;29.09.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-5;EUR;DE89370400440532013000;Wohnen;;Firma GmbH;Einkauf
+28.09.2026;28.09.2026;Überweisung;Firma GmbH Zahlung;-30;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Zahlung
+15.09.2026;15.09.2026;Lastschrift;Verein Name Beitrag SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Freizeit;;Verein Name;Beitrag
+14.09.2026;14.09.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-20;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+11.09.2026;11.09.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-5;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+10.09.2026;10.09.2026;Überweisung;Max Mustermann Umbuchung;500;EUR;DE89370400440532013000;Einnahmen;Max Mustermann;;Umbuchung
+07.09.2026;07.09.2026;Lastschrift;Firma GmbH Rechnung SEPA-BASISLASTSCHRIFT;-5;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Rechnung
+03.09.2026;03.09.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-30;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+01.09.2026;01.09.2026;Lastschrift;Firma GmbH Versicherungsbeitrag SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Versicherungen;;Firma GmbH;Versicherungsbeitrag
+31.08.2026;31.08.2026;Zinsen/Entgelte;Kontoführung Konto  532013000 EUR BLZ   370 400 44 vom 01.08.2026 bis 31.08.2026 Grundpreis 5,00- EUR Der Grundpreis zum Buchungsdatum wurde berechnet, weil der vereinbarte Vermögenswert am 31.07.2026 nicht erreicht wurde.;-5;EUR;DE89370400440532013000;Banken & Kredite;;Kontoführung;
+31.08.2026;31.08.2026;Überweisung;Firma GmbH Erstattung;40;EUR;DE89370400440532013000;Einnahmen;Firma GmbH;;Erstattung
+31.08.2026;31.08.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-20;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+31.08.2026;31.08.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-20;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+31.08.2026;31.08.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+20.08.2026;20.08.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-20;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+18.08.2026;18.08.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-40;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+18.08.2026;18.08.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-100;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+18.08.2026;18.08.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-20;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+17.08.2026;17.08.2026;Lastschrift;Verein Name Beitrag SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Freizeit;;Verein Name;Beitrag
+14.08.2026;14.08.2026;Überweisung;Firma GmbH Rechnung;450;EUR;DE89370400440532013000;Einnahmen;Firma GmbH;;Rechnung
+13.08.2026;13.08.2026;Überweisung;FIRMA GMBH Rechnung;150;EUR;DE89370400440532013000;Einnahmen;FIRMA GMBH;;Rechnung
+13.08.2026;13.08.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-3000;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+12.08.2026;12.08.2026;Überweisung;Firma GmbH Erstattung;30;EUR;DE89370400440532013000;Einnahmen;Firma GmbH;;Erstattung
+12.08.2026;12.08.2026;Überweisung;MAX MUSTERMANN Überweisung;2500;EUR;DE89370400440532013000;Einnahmen;MAX MUSTERMANN;;Überweisung
+11.08.2026;11.08.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-5;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+10.08.2026;10.08.2026;Überweisung;Max Mustermann Umbuchung;500;EUR;DE89370400440532013000;Einnahmen;Max Mustermann;;Umbuchung
+06.08.2026;06.08.2026;Überweisung;Firma GmbH Erstattung;60;EUR;DE89370400440532013000;Einnahmen;Firma GmbH;;Erstattung
+03.08.2026;03.08.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-80;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+03.08.2026;03.08.2026;Lastschrift;Firma GmbH Versicherungsbeitrag SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Versicherungen;;Firma GmbH;Versicherungsbeitrag
+31.07.2026;31.07.2026;Zinsen/Entgelte;Kontoführung Konto  532013000 EUR BLZ   370 400 44 vom 01.07.2026 bis 31.07.2026 Grundpreis 5,00- EUR Der Grundpreis zum Buchungsdatum wurde berechnet, weil der vereinbarte Vermögenswert am 30.06.2026 nicht erreicht wurde.;-5;EUR;DE89370400440532013000;Banken & Kredite;;Kontoführung;
+28.07.2026;28.07.2026;Überweisung;Firma GmbH Erstattung;90;EUR;DE89370400440532013000;Einnahmen;Firma GmbH;;Erstattung
+23.07.2026;23.07.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-200;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+21.07.2026;21.07.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-60;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+20.07.2026;20.07.2026;Überweisung;Max Mustermann Überweisung;-5;EUR;DE89370400440532013000;Sonstige Ausgaben;;Max Mustermann;Überweisung
+20.07.2026;20.07.2026;Überweisung;Max Mustermann Überweisung;-500;EUR;DE89370400440532013000;Online- & Einzelhandel;;Max Mustermann;Überweisung
+20.07.2026;20.07.2026;Überweisung;Finanzamt Erstattung;150;EUR;DE89370400440532013000;Einnahmen;Finanzamt;;Erstattung
+20.07.2026;20.07.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+20.07.2026;20.07.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-50;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+15.07.2026;15.07.2026;Lastschrift;Verein Name Beitrag SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Freizeit;;Verein Name;Beitrag
+15.07.2026;15.07.2026;Lastschrift;Firma GmbH Versicherungsbeitrag SEPA-BASISLASTSCHRIFT;-350;EUR;DE89370400440532013000;Versicherungen;;Firma GmbH;Versicherungsbeitrag
+14.07.2026;14.07.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-90;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+13.07.2026;13.07.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-5;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+10.07.2026;10.07.2026;Überweisung;Max Mustermann Umbuchung;500;EUR;DE89370400440532013000;Einnahmen;Max Mustermann;;Umbuchung
+30.06.2026;30.06.2026;Zinsen/Entgelte;Kontoführung Konto  532013000 EUR BLZ   370 400 44 vom 01.06.2026 bis 30.06.2026 Grundpreis 5,00- EUR Der Grundpreis zum Buchungsdatum wurde berechnet, weil der vereinbarte Vermögenswert am 31.05.2026 nicht erreicht wurde.;-5;EUR;DE89370400440532013000;Banken & Kredite;;Kontoführung;
+30.06.2026;30.06.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-20;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+23.06.2026;23.06.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-100;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+22.06.2026;22.06.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-5;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+17.06.2026;17.06.2026;Überweisung;Firma GmbH Erstattung;5;EUR;DE89370400440532013000;Einnahmen;Firma GmbH;;Erstattung
+16.06.2026;16.06.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-100;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+15.06.2026;15.06.2026;Lastschrift;Verein Name Beitrag SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Freizeit;;Verein Name;Beitrag
+11.06.2026;11.06.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-5;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+10.06.2026;10.06.2026;Überweisung;Max Mustermann Umbuchung;500;EUR;DE89370400440532013000;Einnahmen;Max Mustermann;;Umbuchung
+09.06.2026;09.06.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-60;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+09.06.2026;09.06.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-20;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+09.06.2026;09.06.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-5;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+05.06.2026;05.06.2026;Lastschrift;Firma GmbH Rechnung SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Rechnung
+29.05.2026;31.05.2026;Zinsen/Entgelte;Kontoführung Konto  532013000 EUR BLZ   370 400 44 vom 01.05.2026 bis 31.05.2026 Grundpreis 5,00- EUR Der Grundpreis zum Buchungsdatum wurde berechnet, weil der vereinbarte Vermögenswert am 30.04.2026 nicht erreicht wurde.;-5;EUR;DE89370400440532013000;Banken & Kredite;;Kontoführung;
+27.05.2026;27.05.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-80;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+26.05.2026;26.05.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-20;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+21.05.2026;21.05.2026;Überweisung;Firma GmbH Erstattung;40;EUR;DE89370400440532013000;Einnahmen;Firma GmbH;;Erstattung
+20.05.2026;20.05.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-30;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+15.05.2026;15.05.2026;Lastschrift;Verein Name Beitrag SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Freizeit;;Verein Name;Beitrag
+14.05.2026;14.05.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-250;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+12.05.2026;12.05.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-5;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+12.05.2026;12.05.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-350;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+05.05.2026;05.05.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-80;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+30.04.2026;30.04.2026;Zinsen/Entgelte;Kontoführung Konto  532013000 EUR BLZ   370 400 44 vom 01.04.2026 bis 30.04.2026 Grundpreis 5,00- EUR Der Grundpreis zum Buchungsdatum wurde berechnet, weil der vereinbarte Vermögenswert am 31.03.2026 nicht erreicht wurde.;-5;EUR;DE89370400440532013000;Banken & Kredite;;Kontoführung;
+30.04.2026;30.04.2026;Überweisung;HANS U. ERIKA BEISPIEL Rechnung;450;EUR;DE89370400440532013000;Einnahmen;HANS U. ERIKA BEISPIEL;;Rechnung
+23.04.2026;23.04.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-50;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+22.04.2026;22.04.2026;Überweisung;Firma GmbH Erstattung;5;EUR;DE89370400440532013000;Einnahmen;Firma GmbH;;Erstattung
+22.04.2026;22.04.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-150;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+17.04.2026;17.04.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-5;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+15.04.2026;15.04.2026;Lastschrift;Verein Name Beitrag SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Freizeit;;Verein Name;Beitrag
+14.04.2026;14.04.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-5;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+10.04.2026;10.04.2026;Überweisung;Max Mustermann Umbuchung;500;EUR;DE89370400440532013000;Einnahmen;Max Mustermann;;Umbuchung
+10.04.2026;10.04.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-30;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+10.04.2026;10.04.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+10.04.2026;10.04.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-20;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+09.04.2026;09.04.2026;Überweisung;Finanzamt Erstattung;100;EUR;DE89370400440532013000;Einnahmen;Finanzamt;;Erstattung
+09.04.2026;09.04.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-5;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+09.04.2026;09.04.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+09.04.2026;09.04.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-20;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+09.04.2026;09.04.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-50;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+09.04.2026;09.04.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-20;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+31.03.2026;31.03.2026;Zinsen/Entgelte;Kontoführung Konto  532013000 EUR BLZ   370 400 44 vom 01.03.2026 bis 31.03.2026 Grundpreis 5,00- EUR;-5;EUR;DE89370400440532013000;Banken & Kredite;;Kontoführung;
+17.03.2026;17.03.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-60;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+13.03.2026;13.03.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+12.03.2026;12.03.2026;Überweisung;Firma GmbH Erstattung;10;EUR;DE89370400440532013000;Einnahmen;Firma GmbH;;Erstattung
+10.03.2026;10.03.2026;Überweisung;Max Mustermann Umbuchung;500;EUR;DE89370400440532013000;Einnahmen;Max Mustermann;;Umbuchung
+05.03.2026;05.03.2026;Lastschrift;Firma GmbH Rechnung SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Rechnung
+03.03.2026;03.03.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+03.03.2026;03.03.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-70;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+02.03.2026;02.03.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+02.03.2026;02.03.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-20;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+27.02.2026;30.02.2026;Zinsen/Entgelte;Kontoführung Konto  532013000 EUR BLZ   370 400 44 vom 01.02.2026 bis 28.02.2026 Grundpreis 5,00- EUR;-5;EUR;DE89370400440532013000;Banken & Kredite;;Kontoführung;
+20.02.2026;20.02.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-40;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+19.02.2026;19.02.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-5;EUR;DE89370400440532013000;Wohnen;;Firma GmbH;Einkauf
+17.02.2026;17.02.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-40;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+10.02.2026;10.02.2026;Überweisung;Firma GmbH Erstattung;250;EUR;DE89370400440532013000;Einnahmen;Firma GmbH;;Erstattung
+10.02.2026;10.02.2026;Überweisung;Max Mustermann Umbuchung;500;EUR;DE89370400440532013000;Einnahmen;Max Mustermann;;Umbuchung
+02.02.2026;02.02.2026;Überweisung;ERIKA MUSTERFRAU Überweisung;-50;EUR;DE89370400440532013000;Mobilität & Auto;;ERIKA MUSTERFRAU;Überweisung
+30.01.2026;31.01.2026;Zinsen/Entgelte;Kontoführung Konto  532013000 EUR BLZ   370 400 44 vom 01.01.2026 bis 31.01.2026 Grundpreis 5,00- EUR;-5;EUR;DE89370400440532013000;Banken & Kredite;;Kontoführung;
+16.01.2026;16.01.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-80;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+12.01.2026;12.01.2026;Überweisung;Max Mustermann Umbuchung;500;EUR;DE89370400440532013000;Einnahmen;Max Mustermann;;Umbuchung
+07.01.2026;07.01.2026;Lastschrift;Firma GmbH Rechnung SEPA-BASISLASTSCHRIFT;-5;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Rechnung
+06.01.2026;06.01.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-50;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+06.01.2026;06.01.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-10;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf
+06.01.2026;06.01.2026;Lastschrift;Firma GmbH Einkauf SEPA-BASISLASTSCHRIFT;-20;EUR;DE89370400440532013000;Online- & Einzelhandel;;Firma GmbH;Einkauf

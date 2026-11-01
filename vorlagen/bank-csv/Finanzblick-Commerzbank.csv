@@ -1,0 +1,130 @@
+Buchungsdatum;Wertstellungsdatum;Empfaenger;Verwendungszweck;Buchungstext;Betrag;IBAN;BIC;Kategorie;Konto;Umbuchung;Notiz;Schlagworte;SteuerKategorie;ParentKategorie;AbweichenderEmpfaenger;Splitbuchung;Auswertungsdatum
+02.11.2026;02.11.2026;Krankenversicherung AG;ABBUCHUNG AM 02.11.2026 KV;;-10;;;Kranken-Versicherungen;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;02.11.2026
+30.10.2026;31.10.2026;Kontofuehrung;;;-5;;;Kontogebuehren & Zinsen;DE89370400440532013000;;;;;Sparen & Vorsorge;;false;30.10.2026
+29.10.2026;29.10.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-60;;;Porto;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;29.10.2026
+20.10.2026;20.10.2026;Onlinehaendler GmbH;Onlinebestellung;;90;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;20.10.2026
+16.10.2026;16.10.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-100;;;PayPal;DE89370400440532013000;;;;;Bar- und Kreditkartenzahlungen;;false;16.10.2026
+15.10.2026;15.10.2026;Gewerkschaft Name;BEITRAG BIS 10/26 MANDATSREF MANDAT-001 GLAEUBIGER-ID DE98ZZZ09999999999 NAECHSTER BEITRAGSEINZUG IN BEKANNTER HOEHE UND VEREINBARTEM TURNUS;;-10;;;Vereine & Verbaende & Mitgliedschaften;DE89370400440532013000;;;;;Freizeit;;false;15.10.2026
+15.10.2026;15.10.2026;Hoster GmbH;Kundennummer: K1000000001 Rechnungsnummer: 000000000001;;-2;;;Internet;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;15.10.2026
+14.10.2026;14.10.2026;Finanzamt Name;ERSTATT.00000/00000 UMS.ST 2025;;200;;;Umsatzsteuer-Erstattung;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;14.10.2026
+14.10.2026;14.10.2026;Finanzamt Name;ERSTATT.00000/00000 UMS.ST 3VJ.26;;300;;;Umsatzsteuer-Erstattung;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;14.10.2026
+13.10.2026;13.10.2026;Onlinehaendler GmbH;Onlinebestellung;;-90;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;13.10.2026
+13.10.2026;13.10.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-3;;;Unkategorisiert;DE89370400440532013000;;;;;;;false;13.10.2026
+13.10.2026;13.10.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-500;;;PayPal;DE89370400440532013000;;;;;Bar- und Kreditkartenzahlungen;;false;13.10.2026
+12.10.2026;12.10.2026;Max Mustermann;Nutzungs Umbuchung Max zu Max;;500;;;Sonstige Einnahmen;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;12.10.2026
+01.10.2026;01.10.2026;Onlinehaendler GmbH;Onlinebestellung;;-10;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;01.10.2026
+01.10.2026;01.10.2026;Krankenversicherung AG;ABBUCHUNG AM 01.10.2026 KV;;-10;;;Kranken-Versicherungen;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;01.10.2026
+01.10.2026;01.10.2026;Onlinehaendler GmbH;Onlinebestellung;;-90;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;01.10.2026
+30.09.2026;30.09.2026;Onlinehaendler GmbH;Onlinebestellung;;-30;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;30.09.2026
+30.09.2026;30.09.2026;Kontofuehrung;;;-5;;;Kontogebuehren & Zinsen;DE89370400440532013000;;;;;Sparen & Vorsorge;;false;30.09.2026
+30.09.2026;30.09.2026;Rechnungsabschluss;;;0;;;Kontogebuehren & Zinsen;DE89370400440532013000;;;;;Sparen & Vorsorge;;false;30.09.2026
+29.09.2026;29.09.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-1;;;Porto;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;29.09.2026
+28.09.2026;28.09.2026;Versandhaus GmbH;Nicht geliefert trotzdem zahlen?;;-30;DE89370400440532013001;;Bekleidung & Schuhe;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;28.09.2026
+15.09.2026;15.09.2026;Gewerkschaft Name;BEITRAG BIS 09/26 MANDATSREF MANDAT-001 GLAEUBIGER-ID DE98ZZZ09999999999 NAECHSTER BEITRAGSEINZUG IN BEKANNTER HOEHE UND VEREINBARTEM TURNUS;;-10;;;Vereine & Verbaende & Mitgliedschaften;DE89370400440532013000;;;;;Freizeit;;false;15.09.2026
+14.09.2026;14.09.2026;Onlinehaendler GmbH;Onlinebestellung;;-20;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;14.09.2026
+11.09.2026;11.09.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-3;;;Unkategorisiert;DE89370400440532013000;;;;;;;false;11.09.2026
+10.09.2026;10.09.2026;Max Mustermann;Nutzungs Umbuchung Max zu Max;;500;;;Sonstige Einnahmen;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;10.09.2026
+07.09.2026;07.09.2026;Hoster GmbH;Kundennummer: K1000000001 Rechnungsnummer: 000000000001;;-7;;;Internet;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;07.09.2026
+03.09.2026;03.09.2026;Onlinehaendler GmbH;Onlinebestellung;;-30;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;03.09.2026
+01.09.2026;01.09.2026;Krankenversicherung AG;ABBUCHUNG AM 01.09.2026 KV;;-10;;;Kranken-Versicherungen;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;01.09.2026
+31.08.2026;31.08.2026;Onlinehaendler GmbH;Onlinebestellung;;-10;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;31.08.2026
+31.08.2026;31.08.2026;Onlinehaendler GmbH;Onlinebestellung;;-20;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;31.08.2026
+31.08.2026;31.08.2026;Onlinehaendler GmbH;Onlinebestellung;;-20;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;31.08.2026
+31.08.2026;31.08.2026;Onlinehaendler GmbH;Onlinebestellung;;40;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;31.08.2026
+31.08.2026;31.08.2026;Kontofuehrung;;;-5;;;Kontogebuehren & Zinsen;DE89370400440532013000;;;;;Sparen & Vorsorge;;false;31.08.2026
+20.08.2026;20.08.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-20;;;Haushalt & Lebenshalt.;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;20.08.2026
+18.08.2026;18.08.2026;Onlinehaendler GmbH;Onlinebestellung;;-20;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;18.08.2026
+18.08.2026;18.08.2026;Onlinehaendler GmbH;Onlinebestellung;;-100;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;18.08.2026
+18.08.2026;18.08.2026;Onlinehaendler GmbH;Onlinebestellung;;-40;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;18.08.2026
+17.08.2026;17.08.2026;Gewerkschaft Name;BEITRAG BIS 08/26 MANDATSREF MANDAT-001 GLAEUBIGER-ID DE98ZZZ09999999999 NAECHSTER BEITRAGSEINZUG IN BEKANNTER HOEHE UND VEREINBARTEM TURNUS;;-10;;;Vereine & Verbaende & Mitgliedschaften;DE89370400440532013000;;;;;Freizeit;;false;17.08.2026
+14.08.2026;14.08.2026;Organisation Name;RE-000001/31.07.26/;;500;;;Sonstige Einnahmen;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;14.08.2026
+13.08.2026;13.08.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-3000;;;Haushalt & Lebenshalt.;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;13.08.2026
+13.08.2026;13.08.2026;Stiftung Name;RE-000001/03.08.26/;;100;;;Sonstige Einnahmen;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;13.08.2026
+12.08.2026;12.08.2026;Max Mustermann;Fuer Computer;;3000;;;Sonstige Einnahmen;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;12.08.2026
+12.08.2026;12.08.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH/ABBUCHUNG VOM PAYPAL-KONTO;;30;;;Sonstige Einnahmen;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;12.08.2026
+11.08.2026;11.08.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-3;;;Unkategorisiert;DE89370400440532013000;;;;;;;false;11.08.2026
+10.08.2026;10.08.2026;Max Mustermann;Nutzungs Umbuchung Max zu Max;;500;;;Sonstige Einnahmen;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;10.08.2026
+06.08.2026;06.08.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH/ABBUCHUNG VOM PAYPAL-KONTO;;60;;;Sonstige Einnahmen;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;06.08.2026
+03.08.2026;03.08.2026;Krankenversicherung AG;ABBUCHUNG AM 03.08.2026 KV;;-10;;;Kranken-Versicherungen;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;03.08.2026
+03.08.2026;03.08.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-80;;;Bekleidung & Schuhe;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;03.08.2026
+31.07.2026;31.07.2026;Kontofuehrung;;;-5;;;Kontogebuehren & Zinsen;DE89370400440532013000;;;;;Sparen & Vorsorge;;false;31.07.2026
+28.07.2026;28.07.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH/ABBUCHUNG VOM PAYPAL-KONTO;;90;;;Sonstige Einnahmen;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;28.07.2026
+23.07.2026;23.07.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-200;;;Haushalt & Lebenshalt.;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;23.07.2026
+21.07.2026;21.07.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-60;;;Haushalt & Lebenshalt.;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;21.07.2026
+20.07.2026;20.07.2026;Onlinehaendler GmbH;Onlinebestellung;;-50;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;20.07.2026
+20.07.2026;20.07.2026;Onlinehaendler GmbH;Onlinebestellung;;-9;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;20.07.2026
+20.07.2026;20.07.2026;Finanzamt Name;ERSTATT.00000/00000 UMS.ST 2VJ.26;;100;;;Umsatzsteuer-Erstattung;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;20.07.2026
+20.07.2026;20.07.2026;Max Mustermann;Fuer Kartenzahlung;;-500;DE89370400440532013001;;Unkategorisiert;DE89370400440532013000;;;;;;;false;20.07.2026
+20.07.2026;20.07.2026;Max Mustermann;ID-Bestaetigung;;-1;DE89370400440532013001;;Unkategorisiert;DE89370400440532013000;;;;;;;false;20.07.2026
+15.07.2026;15.07.2026;Versicherung AG;Vers. nr. 1234567890;;-400;;;Rechtsschutz ;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;15.07.2026
+15.07.2026;15.07.2026;Gewerkschaft Name;BEITRAG BIS 07/26 MANDATSREF MANDAT-001 GLAEUBIGER-ID DE98ZZZ09999999999 NAECHSTER BEITRAGSEINZUG IN BEKANNTER HOEHE UND VEREINBARTEM TURNUS;;-10;;;Vereine & Verbaende & Mitgliedschaften;DE89370400440532013000;;;;;Freizeit;;false;15.07.2026
+14.07.2026;14.07.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-90;;;PayPal;DE89370400440532013000;;;;;Bar- und Kreditkartenzahlungen;;false;14.07.2026
+13.07.2026;13.07.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-3;;;Unkategorisiert;DE89370400440532013000;;;;;;;false;13.07.2026
+10.07.2026;10.07.2026;Max Mustermann;Nutzungs Umbuchung Max zu Max;;500;;;Sonstige Einnahmen;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;10.07.2026
+30.06.2026;30.06.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-20;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;30.06.2026
+30.06.2026;30.06.2026;Kontofuehrung;;;-5;;;Kontogebuehren & Zinsen;DE89370400440532013000;;;;;Sparen & Vorsorge;;false;30.06.2026
+30.06.2026;30.06.2026;Rechnungsabschluss;;;0;;;Kontogebuehren & Zinsen;DE89370400440532013000;;;;;Sparen & Vorsorge;;false;30.06.2026
+23.06.2026;23.06.2026;Onlinehaendler GmbH;Onlinebestellung;;-100;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;23.06.2026
+22.06.2026;22.06.2026;Onlinehaendler GmbH;Onlinebestellung;;-5;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;22.06.2026
+17.06.2026;17.06.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH/ABBUCHUNG VOM PAYPAL-KONTO;;0,6;;;Sonstige Einnahmen;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;17.06.2026
+16.06.2026;16.06.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-100;;;Haushalt & Lebenshalt.;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;16.06.2026
+15.06.2026;15.06.2026;Gewerkschaft Name;BEITRAG BIS 06/26 MANDATSREF MANDAT-001 GLAEUBIGER-ID DE98ZZZ09999999999 NAECHSTER BEITRAGSEINZUG IN BEKANNTER HOEHE UND VEREINBARTEM TURNUS;;-10;;;Vereine & Verbaende & Mitgliedschaften;DE89370400440532013000;;;;;Freizeit;;false;15.06.2026
+11.06.2026;11.06.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-3;;;Unkategorisiert;DE89370400440532013000;;;;;;;false;11.06.2026
+10.06.2026;10.06.2026;Max Mustermann;Nutzungs Umbuchung Max zu Max;;500;;;Sonstige Einnahmen;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;10.06.2026
+09.06.2026;09.06.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-2;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;09.06.2026
+09.06.2026;09.06.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-20;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;09.06.2026
+09.06.2026;09.06.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-60;;;Bekleidung & Schuhe;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;09.06.2026
+05.06.2026;05.06.2026;Hoster GmbH;Kundennummer: K1000000001 Rechnungsnummer: 000000000001;;-10;;;Internet;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;05.06.2026
+29.05.2026;31.05.2026;Kontofuehrung;;;-5;;;Kontogebuehren & Zinsen;DE89370400440532013000;;;;;Sparen & Vorsorge;;false;29.05.2026
+27.05.2026;27.05.2026;Onlinehaendler GmbH;Onlinebestellung;;-80;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;27.05.2026
+26.05.2026;26.05.2026;Onlinehaendler GmbH;Onlinebestellung;;-20;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;26.05.2026
+21.05.2026;21.05.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH/ABBUCHUNG VOM PAYPAL-KONTO;;40;;;Sonstige Einnahmen;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;21.05.2026
+20.05.2026;20.05.2026;Onlinehaendler GmbH;Onlinebestellung;;-30;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;20.05.2026
+15.05.2026;15.05.2026;Gewerkschaft Name;BEITRAG BIS 05/26 MANDATSREF MANDAT-001 GLAEUBIGER-ID DE98ZZZ09999999999 NAECHSTER BEITRAGSEINZUG IN BEKANNTER HOEHE UND VEREINBARTEM TURNUS;;-10;;;Vereine & Verbaende & Mitgliedschaften;DE89370400440532013000;;;;;Freizeit;;false;15.05.2026
+14.05.2026;14.05.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-200;;;Bekleidung & Schuhe;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;14.05.2026
+12.05.2026;12.05.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-300;;;PayPal;DE89370400440532013000;;;;;Bar- und Kreditkartenzahlungen;;false;12.05.2026
+12.05.2026;12.05.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-3;;;Unkategorisiert;DE89370400440532013000;;;;;;;false;12.05.2026
+05.05.2026;05.05.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-80;;;Haushalt & Lebenshalt.;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;05.05.2026
+30.04.2026;30.04.2026;Max Mustermann;RE RE000001;;400;;;Sonstige Einnahmen;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;30.04.2026
+30.04.2026;30.04.2026;Kontofuehrung;;;-5;;;Kontogebuehren & Zinsen;DE89370400440532013000;;;;;Sparen & Vorsorge;;false;30.04.2026
+23.04.2026;23.04.2026;Onlinehaendler GmbH;Onlinebestellung;;-50;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;23.04.2026
+22.04.2026;22.04.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH, Artikel-;;-200;;;PayPal;DE89370400440532013000;;;;;Bar- und Kreditkartenzahlungen;;false;22.04.2026
+22.04.2026;22.04.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH/ABBUCHUNG VOM PAYPAL-KONTO;;1;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;22.04.2026
+17.04.2026;17.04.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-7;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;17.04.2026
+15.04.2026;15.04.2026;Gewerkschaft Name;BEITRAG BIS 04/26 MANDATSREF MANDAT-001 GLAEUBIGER-ID DE98ZZZ09999999999 NAECHSTER BEITRAGSEINZUG IN BEKANNTER HOEHE UND VEREINBARTEM TURNUS;;-10;;;Vereine & Verbaende & Mitgliedschaften;DE89370400440532013000;;;;;Freizeit;;false;15.04.2026
+14.04.2026;14.04.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-3;;;Unkategorisiert;DE89370400440532013000;;;;;;;false;14.04.2026
+10.04.2026;10.04.2026;Onlinehaendler GmbH;Onlinebestellung;;-20;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;10.04.2026
+10.04.2026;10.04.2026;Onlinehaendler GmbH;Onlinebestellung;;-10;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;10.04.2026
+10.04.2026;10.04.2026;Onlinehaendler GmbH;Onlinebestellung;;-30;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;10.04.2026
+10.04.2026;10.04.2026;Max Mustermann;Nutzungs Umbuchung Max zu Max;;500;;;Sonstige Einnahmen;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;10.04.2026
+09.04.2026;09.04.2026;Onlinehaendler GmbH;Onlinebestellung;;-20;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;09.04.2026
+09.04.2026;09.04.2026;Onlinehaendler GmbH;Onlinebestellung;;-50;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;09.04.2026
+09.04.2026;09.04.2026;Onlinehaendler GmbH;Onlinebestellung;;-20;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;09.04.2026
+09.04.2026;09.04.2026;Onlinehaendler GmbH;Onlinebestellung;;-10;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;09.04.2026
+09.04.2026;09.04.2026;Onlinehaendler GmbH;Onlinebestellung;;-7;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;09.04.2026
+09.04.2026;09.04.2026;Finanzamt Name;ERSTATT.00000/00000 UMS.ST 1VJ.26;;100;;;Umsatzsteuer-Erstattung;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;09.04.2026
+31.03.2026;31.03.2026;Kontofuehrung;;;-5;;;Kontogebuehren & Zinsen;DE89370400440532013000;;;;;Sparen & Vorsorge;;false;31.03.2026
+31.03.2026;31.03.2026;Rechnungsabschluss;;;0;;;Kontogebuehren & Zinsen;DE89370400440532013000;;;;;Sparen & Vorsorge;;false;31.03.2026
+17.03.2026;17.03.2026;Onlinehaendler GmbH;Onlinebestellung;;-60;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;17.03.2026
+13.03.2026;13.03.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-10;;;Haushalt & Lebenshalt.;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;13.03.2026
+12.03.2026;12.03.2026;Onlinehaendler GmbH;Onlinebestellung;;9;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;12.03.2026
+10.03.2026;10.03.2026;Max Mustermann;Nutzungs Umbuchung Max zu Max;;500;;;Sonstige Einnahmen;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;10.03.2026
+05.03.2026;05.03.2026;Hoster GmbH;Kundennummer: K1000000001 Rechnungsnummer: 000000000001;;-8;;;Internet;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;05.03.2026
+03.03.2026;03.03.2026;Onlinehaendler GmbH;Onlinebestellung;;-70;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;03.03.2026
+03.03.2026;03.03.2026;Onlinehaendler GmbH;Onlinebestellung;;-9;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;03.03.2026
+02.03.2026;02.03.2026;Onlinehaendler GmbH;Onlinebestellung;;-20;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;02.03.2026
+02.03.2026;02.03.2026;Onlinehaendler GmbH;Onlinebestellung;;-8;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;02.03.2026
+27.02.2026;28.02.2026;Kontofuehrung;;;-5;;;Kontogebuehren & Zinsen;DE89370400440532013000;;;;;Sparen & Vorsorge;;false;27.02.2026
+20.02.2026;20.02.2026;Onlinehaendler GmbH;Onlinebestellung;;-40;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;20.02.2026
+19.02.2026;19.02.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-6;;;Porto;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;19.02.2026
+17.02.2026;17.02.2026;Onlinehaendler GmbH;Onlinebestellung;;-40;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;17.02.2026
+10.02.2026;10.02.2026;Max Mustermann;Nutzungs Umbuchung Max zu Max;;500;;;Sonstige Einnahmen;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;10.02.2026
+10.02.2026;10.02.2026;Verlag GmbH;Rueckerstattung Elektor;;300;;;Sonstige Einnahmen;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;10.02.2026
+02.02.2026;02.02.2026;Max Mustermann;Uberspace;;-50;DE89370400440532013001;;Unkategorisiert;DE89370400440532013000;;;;;;;false;02.02.2026
+30.01.2026;31.01.2026;Kontofuehrung;;;-5;;;Kontogebuehren & Zinsen;DE89370400440532013000;;;;;Sparen & Vorsorge;;false;30.01.2026
+16.01.2026;16.01.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-80;;;Unkategorisiert;DE89370400440532013000;;;;;;;false;16.01.2026
+12.01.2026;12.01.2026;Max Mustermann;Nutzungs Umbuchung Max zu Max;;500;;;Sonstige Einnahmen;DE89370400440532013000;;;;;Sonstige Einnahmen;;false;12.01.2026
+07.01.2026;07.01.2026;Hoster GmbH;Kundennummer: K1000000001 Rechnungsnummer: 000000000001;;-7;;;Internet;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;07.01.2026
+06.01.2026;06.01.2026;Onlinehaendler GmbH;Onlinebestellung;;-20;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;06.01.2026
+06.01.2026;06.01.2026;Onlinehaendler GmbH;Onlinebestellung;;-10;;;Unterhaltung & Spiele;DE89370400440532013000;;;;;Freizeit;;false;06.01.2026
+06.01.2026;06.01.2026;Zahlungsdienst GmbH;Firma GmbH, Ihr Einkauf bei Firma GmbH;;-50;;;Haushalt & Lebenshalt.;DE89370400440532013000;;;;;Haushalt & Lebenshalt.;;false;06.01.2026
