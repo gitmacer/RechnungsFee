@@ -2740,6 +2740,7 @@ export type BankTransaktionVorschau = {
   verwendungszweck?: string | null
   partner_name?: string | null
   partner_iban?: string | null
+  partner_bic?: string | null
   betrag: string
   waehrung: string
   saldo?: string | null

@@ -38,9 +38,10 @@ const VORSCHAU_MAX_ZEILEN = 500
 // Hilfsfunktionen
 // ---------------------------------------------------------------------------
 
-function euroFmt(v: string | number): string {
+function euroFmt(v: string | number, waehrung = 'EUR'): string {
   const n = typeof v === 'string' ? parseFloat(v) : v
-  return new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(n)
+  const cur = /^[A-Z]{3}$/.test(waehrung) ? waehrung : 'EUR'
+  return new Intl.NumberFormat('de-DE', { style: 'currency', currency: cur }).format(n)
 }
 
 function datumFmt(iso: string): string {
@@ -409,7 +410,7 @@ function ImportDialog({ konten, templates, onClose, onErfolg }: ImportDialogProp
               </div>
 
               <div className="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-700">
-                <table className="w-full text-xs">
+                <table className="w-full min-w-[980px] text-xs">
                   <thead>
                     <tr className="bg-slate-50 dark:bg-slate-700/50 text-slate-500 dark:text-slate-400">
                       <th className="px-3 py-2 text-left w-8">
@@ -420,9 +421,16 @@ function ImportDialog({ konten, templates, onClose, onErfolg }: ImportDialogProp
                             : setAuswahl(new Set())} />
                       </th>
                       <th className="px-3 py-2 text-left">Datum</th>
+                      <th className="px-3 py-2 text-left">Valuta</th>
                       <th className="px-3 py-2 text-right">Betrag</th>
+                      <th className="px-3 py-2 text-left">Währung</th>
+                      <th className="px-3 py-2 text-right">Saldo</th>
                       <th className="px-3 py-2 text-left">Partner</th>
+                      <th className="px-3 py-2 text-left">Partner-IBAN</th>
+                      <th className="px-3 py-2 text-left">BIC</th>
+                      <th className="px-3 py-2 text-left">Buchungstext</th>
                       <th className="px-3 py-2 text-left">Verwendungszweck</th>
+                      <th className="px-3 py-2 text-left">Referenz</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -434,18 +442,25 @@ function ImportDialog({ konten, templates, onClose, onErfolg }: ImportDialogProp
                       >
                         <td className="px-3 py-1.5">
                           {tx.ist_duplikat
-                            ? <span className="text-amber-500">↩</span>
+                            ? <span className="text-amber-500" title="Bereits importiert (Duplikat)">↩</span>
                             : <input type="checkbox" className="h-3 w-3"
                                 checked={auswahl.has(tx.dedupe_hash)}
                                 onChange={() => toggleAuswahl(tx.dedupe_hash)} />
                           }
                         </td>
                         <td className="px-3 py-1.5 whitespace-nowrap text-slate-600 dark:text-slate-300">{datumFmt(tx.datum)}</td>
+                        <td className="px-3 py-1.5 whitespace-nowrap text-slate-600 dark:text-slate-300">{tx.valuta ? datumFmt(tx.valuta) : '–'}</td>
                         <td className={`px-3 py-1.5 text-right font-mono font-medium whitespace-nowrap ${
                           parseFloat(tx.betrag) >= 0 ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'
-                        }`}>{euroFmt(tx.betrag)}</td>
-                        <td className="px-3 py-1.5 text-slate-700 dark:text-slate-200 max-w-[180px] truncate">{tx.partner_name ?? '–'}</td>
-                        <td className="px-3 py-1.5 text-slate-500 dark:text-slate-400 max-w-[200px] truncate">{tx.verwendungszweck ?? '–'}</td>
+                        }`}>{euroFmt(tx.betrag, tx.waehrung)}</td>
+                        <td className="px-3 py-1.5 whitespace-nowrap text-slate-500 dark:text-slate-400">{tx.waehrung}</td>
+                        <td className="px-3 py-1.5 text-right font-mono whitespace-nowrap text-slate-500 dark:text-slate-400">{tx.saldo != null ? euroFmt(tx.saldo, tx.waehrung) : '–'}</td>
+                        <td className="px-3 py-1.5 text-slate-700 dark:text-slate-200 max-w-[160px] truncate" title={tx.partner_name ?? ''}>{tx.partner_name ?? '–'}</td>
+                        <td className="px-3 py-1.5 font-mono text-slate-500 dark:text-slate-400 max-w-[170px] truncate" title={tx.partner_iban ?? ''}>{tx.partner_iban ?? '–'}</td>
+                        <td className="px-3 py-1.5 font-mono text-slate-500 dark:text-slate-400 whitespace-nowrap">{tx.partner_bic ?? '–'}</td>
+                        <td className="px-3 py-1.5 text-slate-500 dark:text-slate-400 max-w-[150px] truncate" title={tx.buchungstext ?? ''}>{tx.buchungstext ?? '–'}</td>
+                        <td className="px-3 py-1.5 text-slate-500 dark:text-slate-400 max-w-[200px] truncate" title={tx.verwendungszweck ?? ''}>{tx.verwendungszweck ?? '–'}</td>
+                        <td className="px-3 py-1.5 font-mono text-slate-400 dark:text-slate-500 max-w-[140px] truncate" title={tx.referenz ?? ''}>{tx.referenz ?? '–'}</td>
                       </tr>
                     ))}
                   </tbody>

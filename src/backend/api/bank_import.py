@@ -59,6 +59,7 @@ class TransaktionVorschau(BaseModel):
     verwendungszweck: Optional[str] = None
     partner_name: Optional[str] = None
     partner_iban: Optional[str] = None
+    partner_bic: Optional[str] = None
     betrag: Decimal
     waehrung: str = "EUR"
     saldo: Optional[Decimal] = None
@@ -750,6 +751,7 @@ def _vorschau_fuer_bytes(
                 verwendungszweck=tx.get("verwendungszweck"),
                 partner_name=tx.get("partner_name"),
                 partner_iban=tx.get("partner_iban"),
+                partner_bic=tx.get("partner_bic"),
                 betrag=tx["betrag"],
                 waehrung=tx.get("waehrung", "EUR"),
                 saldo=tx.get("saldo"),
@@ -792,6 +794,7 @@ def _vorschau_fuer_bytes(
                 verwendungszweck=tx.get("verwendungszweck"),
                 partner_name=tx.get("partner_name"),
                 partner_iban=tx.get("partner_iban"),
+                partner_bic=tx.get("partner_bic"),
                 betrag=tx["betrag"],
                 waehrung=tx.get("waehrung", "EUR"),
                 saldo=tx.get("saldo"),
@@ -867,6 +870,7 @@ def _vorschau_fuer_bytes(
             verwendungszweck=tx.get("verwendungszweck"),
             partner_name=tx.get("partner_name"),
             partner_iban=tx.get("partner_iban"),
+            partner_bic=tx.get("partner_bic"),
             betrag=tx["betrag"],
             waehrung=tx.get("waehrung", "EUR"),
             saldo=tx.get("saldo"),
